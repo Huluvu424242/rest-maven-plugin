@@ -6,7 +6,11 @@ pom.xml.next
 release.properties
 dependency-reduced-pom.xml
 buildNumber.properties
+# IDE files
 nb-configuration.xml
 .classpath
 .project
 .settings/
+.idea
+*.iml
+
