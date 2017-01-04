@@ -269,6 +269,19 @@ public class Plugin extends AbstractMojo
     private String method = "POST";
 
     /**
+     * Username for authentication if needed
+     */
+    @Parameter( property = "user")
+    private String user;
+
+    /**
+     * Password for authentication if needed
+     */
+    @Parameter( property="password")
+    private String password;
+
+
+    /**
      * A list of {@link org.apache.maven.model.FileSet} rules to select files
      * and directories.
      *
@@ -360,7 +373,7 @@ public class Plugin extends AbstractMojo
      * <code>MediaType.TEXT_PLAIN_TYPE</code>
      *
      * If this is specified, use the elements for MediaType class:
-     * 
+     *
      * <pre>
      *     &lt;requestType&gt;
      *       &lt;type&gt;application&lt;/type&gt;
@@ -592,6 +605,8 @@ public class Plugin extends AbstractMojo
         getLog().info( String.format( "Output dir [%s]", getOutputDir().toString() ) );
 
         Client client = ClientBuilder.newClient();
+        client.register(new Authenticator(user, password));
+
 
         WebTarget baseTarget = client.target( getEndpoint() );
         if ( null != getResource() )
@@ -825,5 +840,17 @@ public class Plugin extends AbstractMojo
     {
         this.method = method;
     }
+
+    public String getUser()
+    { return user; }
+
+    public void setUser( String user)
+    { this.user = user; }
+
+    public String getPassword()
+    { return password; }
+
+    public void setPassword( String password )
+    { this.password = password; }
 
 }
