@@ -107,7 +107,7 @@
         <maven-plugin-plugin.version>3.4</maven-plugin-plugin.version>
         <maven-checkstyle-plugin.version>2.16</maven-checkstyle-plugin.version>
         <maven-invoker-plugin.version>2.0.0</maven-invoker-plugin.version>
-        <maven-gpg-plugin.version>1.5</maven-gpg-plugin.version>
+        <!--<maven-gpg-plugin.version>1.5</maven-gpg-plugin.version>-->
 
         <!-- http://stackoverflow.com/questions/22355235/patch-request-using-jersey-client -->
         <jersey-client.version>2.25</jersey-client.version>
