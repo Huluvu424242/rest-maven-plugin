@@ -24,10 +24,6 @@
         results.
     </description>
 
-    <!-- mvn -Prelease release:clean release:prepare -->
-    <!-- mvn -Prelease release:perform -->
-    <!-- cd target/checkout && mvn -Prelease nexus-staging:release -->
-    <url>http://github.com/funthomas424242/rest-maven-plugin</url>
 
     <licenses>
         <license>
