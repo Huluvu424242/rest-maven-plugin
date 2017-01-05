@@ -2,6 +2,8 @@
 
 (this is a fork of the [cjnygard/rest-maven-plugin](https://github.com/cjnygard/rest-maven-plugin) project)
 
+[![Build Status](https://travis-ci.org/FunThomas424242/rest-maven-plugin.svg?branch=master)](https://travis-ci.org/FunThomas424242/rest-maven-plugin)
+
 Welcome to the rest-maven-plugin plugin for Apache Maven 3.
 
 This plugin is meant to provide an easy way to interface to REST
