@@ -1,4 +1,11 @@
 
+# 0.1.6
+(Fork Maintainer: FunThomas424242)
+
+ * junit tests fixed
+ * readme infos updated
+ * 
+
 # 0.1.5 at 05.01.2017
 (Fork Maintainer: FunThomas424242)
 
