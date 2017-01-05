@@ -7,7 +7,7 @@
 
 ## Developer Info
 
-### Build a release
+### Build a release (ssh url support currently not work)
 
 ```shell
 # start the ssh-agent in the background
