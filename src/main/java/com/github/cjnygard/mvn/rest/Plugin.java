@@ -51,13 +51,9 @@ import org.apache.maven.plugins.annotations.Parameter;
 import org.apache.maven.project.MavenProject;
 import org.apache.maven.project.MavenProjectHelper;
 import org.apache.maven.settings.Settings;
-//import org.codehaus.plexus.components.io.filemappers.AbstractFileMapper;
-//import org.codehaus.plexus.components.io.filemappers.IdentityMapper;
 import org.codehaus.plexus.components.io.filemappers.FileMapper;
-//import org.codehaus.plexus.component.annotations.Component;
 import org.codehaus.plexus.util.FileUtils;
 import org.glassfish.jersey.client.HttpUrlConnectorProvider;
-//import org.sonatype.plexus.build.incremental.BuildContext;
 
 /**
  * Make REST request, sending file contents and saving results to a file.
