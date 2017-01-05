@@ -87,12 +87,11 @@
         <!-- http://stackoverflow.com/questions/22355235/patch-request-using-jersey-client -->
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
-        <!-- Turn off checkstyle formatting -->
-        <!--netbeans.checkstyle.format>false</netbeans.checkstyle.format-->
-        <netbeans.checkstyle.format>true</netbeans.checkstyle.format>
 
-        <nexus-staging-maven-plugin.version>1.6.3</nexus-staging-maven-plugin.version>
-        <maven-release-plugin.version>2.5</maven-release-plugin.version>
+        <!-- dependency versions -->
+
+        <!--<nexus-staging-maven-plugin.version>1.6.3</nexus-staging-maven-plugin.version>-->
+        <!--<maven-release-plugin.version>2.5</maven-release-plugin.version>-->
         <maven-core.version>3.3.9</maven-core.version>
         <maven-compat.version>3.3.9</maven-compat.version>
         <maven-model.version>3.3.9</maven-model.version>
@@ -105,27 +104,38 @@
         <maven-plugin-tools-api.version>3.4</maven-plugin-tools-api.version>
         <maven-plugin-testing-harness.version>3.3.0</maven-plugin-testing-harness.version>
         <maven-plugin-plugin.version>3.4</maven-plugin-plugin.version>
-        <maven-checkstyle-plugin.version>2.16</maven-checkstyle-plugin.version>
+        <!--<maven-checkstyle-plugin.version>2.16</maven-checkstyle-plugin.version>-->
         <maven-invoker-plugin.version>2.0.0</maven-invoker-plugin.version>
         <!--<maven-gpg-plugin.version>1.5</maven-gpg-plugin.version>-->
 
         <!-- http://stackoverflow.com/questions/22355235/patch-request-using-jersey-client -->
         <jersey-client.version>2.25</jersey-client.version>
         <jersey-json.version>1.19.3</jersey-json.version>
-        <file-management.version>1.2</file-management.version>
+
+
+
+
+
+        <!--<file-management.version>1.2</file-management.version>-->
 
         <!-- Plexus component versions -->
-        <plexus-compiler-api.version>2.5</plexus-compiler-api.version>
-        <plexus-utils.version>3.0.22</plexus-utils.version>
-        <plexus-build-api.version>0.0.7</plexus-build-api.version>
-        <plexus.version>3.0.22</plexus.version>
-        <plexus-resources.version>1.0.1</plexus-resources.version>
-        <plexus-io.version>2.6.1</plexus-io.version>
-        <plexus-component-annotations.version>1.6</plexus-component-annotations.version>
-        <plexus-component-metadata.version>1.6</plexus-component-metadata.version>
+        <!--<plexus-compiler-api.version>2.5</plexus-compiler-api.version>-->
+        <!--<plexus-utils.version>3.0.22</plexus-utils.version>-->
+        <!--<plexus-build-api.version>0.0.7</plexus-build-api.version>-->
+        <!--<plexus.version>3.0.22</plexus.version>-->
+        <!--<plexus-resources.version>1.0.1</plexus-resources.version>-->
+        <!--<plexus-io.version>2.6.1</plexus-io.version>-->
+        <!--<plexus-component-annotations.version>1.6</plexus-component-annotations.version>-->
+        <!--<plexus-component-metadata.version>1.6</plexus-component-metadata.version>-->
     </properties>
 
     <dependencies>
+
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>2.5</version>
+        </dependency>
 
         <dependency>
             <groupId>org.apache.maven</groupId>
@@ -205,47 +215,47 @@
 
 
         <!-- Plexus components dependencies.    -->
-        <dependency>
-            <groupId>org.codehaus.plexus</groupId>
-            <artifactId>plexus-compiler-api</artifactId>
-            <version>${plexus-compiler-api.version}</version>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>org.codehaus.plexus</groupId>-->
+            <!--<artifactId>plexus-compiler-api</artifactId>-->
+            <!--<version>${plexus-compiler-api.version}</version>-->
+        <!--</dependency>-->
 
-        <dependency>
-            <groupId>org.codehaus.plexus</groupId>
-            <artifactId>plexus-utils</artifactId>
-            <version>${plexus-utils.version}</version>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>org.codehaus.plexus</groupId>-->
+            <!--<artifactId>plexus-utils</artifactId>-->
+            <!--<version>${plexus-utils.version}</version>-->
+        <!--</dependency>-->
 
-        <dependency>
-            <groupId>org.sonatype.plexus</groupId>
-            <artifactId>plexus-build-api</artifactId>
-            <version>${plexus-build-api.version}</version>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>org.sonatype.plexus</groupId>-->
+            <!--<artifactId>plexus-build-api</artifactId>-->
+            <!--<version>${plexus-build-api.version}</version>-->
+        <!--</dependency>-->
 
-        <dependency>
-            <groupId>org.codehaus.plexus</groupId>
-            <artifactId>plexus-resources</artifactId>
-            <version>${plexus-resources.version}</version>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>org.codehaus.plexus</groupId>-->
+            <!--<artifactId>plexus-resources</artifactId>-->
+            <!--<version>${plexus-resources.version}</version>-->
+        <!--</dependency>-->
 
-        <dependency>
-            <groupId>org.codehaus.plexus</groupId>
-            <artifactId>plexus-io</artifactId>
-            <version>${plexus-io.version}</version>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>org.codehaus.plexus</groupId>-->
+            <!--<artifactId>plexus-io</artifactId>-->
+            <!--<version>${plexus-io.version}</version>-->
+        <!--</dependency>-->
 
-        <dependency>
-            <groupId>org.codehaus.plexus</groupId>
-            <artifactId>plexus-component-annotations</artifactId>
-            <version>${plexus-component-annotations.version}</version>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>org.codehaus.plexus</groupId>-->
+            <!--<artifactId>plexus-component-annotations</artifactId>-->
+            <!--<version>${plexus-component-annotations.version}</version>-->
+        <!--</dependency>-->
 
-        <dependency>
-            <groupId>org.apache.maven.shared</groupId>
-            <artifactId>file-management</artifactId>
-            <version>${file-management.version}</version>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>org.apache.maven.shared</groupId>-->
+            <!--<artifactId>file-management</artifactId>-->
+            <!--<version>${file-management.version}</version>-->
+        <!--</dependency>-->
 
         <dependency>
             <groupId>org.glassfish.jersey.core</groupId>
@@ -357,29 +367,6 @@
             </build>
         </profile>
 
-        <profile>
-            <id>reporting</id>
-            <activation>
-                <property>
-                    <name>skipReports</name>
-                    <value>!true</value>
-                </property>
-            </activation>
-            <reporting>
-                <plugins>
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-checkstyle-plugin</artifactId>
-                        <version>${maven-checkstyle-plugin.version}</version>
-                        <configuration>
-                            <skip>true</skip>
-                            <configLocation>config/maven_checks.xml</configLocation>
-                            <headerLocation>config/maven-header.txt</headerLocation>
-                        </configuration>
-                    </plugin>
-                </plugins>
-            </reporting>
-        </profile>
     </profiles>
 
     <build>
@@ -406,18 +393,18 @@
                 </configuration>
             </plugin>
 
-            <plugin>
-                <groupId>org.codehaus.plexus</groupId>
-                <artifactId>plexus-component-metadata</artifactId>
-                <version>${plexus-component-metadata.version}</version>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>generate-metadata</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
+            <!--<plugin>-->
+                <!--<groupId>org.codehaus.plexus</groupId>-->
+                <!--<artifactId>plexus-component-metadata</artifactId>-->
+                <!--<version>${plexus-component-metadata.version}</version>-->
+                <!--<executions>-->
+                    <!--<execution>-->
+                        <!--<goals>-->
+                            <!--<goal>generate-metadata</goal>-->
+                        <!--</goals>-->
+                    <!--</execution>-->
+                <!--</executions>-->
+            <!--</plugin>-->
 
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>

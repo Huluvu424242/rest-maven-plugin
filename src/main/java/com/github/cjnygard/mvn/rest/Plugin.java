@@ -57,7 +57,7 @@ import org.codehaus.plexus.components.io.filemappers.FileMapper;
 //import org.codehaus.plexus.component.annotations.Component;
 import org.codehaus.plexus.util.FileUtils;
 import org.glassfish.jersey.client.HttpUrlConnectorProvider;
-import org.sonatype.plexus.build.incremental.BuildContext;
+//import org.sonatype.plexus.build.incremental.BuildContext;
 
 /**
  * Make REST request, sending file contents and saving results to a file.
@@ -397,14 +397,6 @@ public class Plugin extends AbstractMojo
     private MediaType responseType = MediaType.APPLICATION_OCTET_STREAM_TYPE;
 
     /**
-     * The Plexus BuildContext is used to identify files or directories modified
-     * since last build, implying functionality used to define if java
-     * generation must be performed again.
-     */
-    @Component( role = org.sonatype.plexus.build.incremental.BuildContext.class )
-    private BuildContext buildContext;
-
-    /**
      * Note that the execution parameter will be injected ONLY if this plugin is
      * executed as part of a maven standard lifecycle - as opposed to directly
      * invoked with a direct invocation. When firing this mojo directly (i.e.
@@ -425,17 +417,6 @@ public class Plugin extends AbstractMojo
         return objectOrNull;
     }
 
-    /**
-     * The Plexus BuildContext is used to identify files or directories modified
-     * since last build, implying functionality used to define if java
-     * generation must be performed again.
-     *
-     * @return the active Plexus BuildContext.
-     */
-    protected final BuildContext getBuildContext()
-    {
-        return getInjectedObject( buildContext, "buildContext" );
-    }
 
     /**
      * @return The active MavenProject.
