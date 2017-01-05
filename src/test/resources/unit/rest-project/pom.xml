@@ -1,77 +1,54 @@
-<project
-  xmlns="http://maven.apache.org/POM/4.0.0"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
->
-  <modelVersion>4.0.0</modelVersion>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.github.funthomas424242</groupId>
-  <artifactId>rest-maven-plugin-test</artifactId>
-  <version>0.1.5-SNAPSHOT</version>
-  <packaging>jar</packaging>
+    <groupId>com.github.funthomas424242</groupId>
+    <artifactId>rest-project</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
+    <name>Test of Rest Plugin</name>
 
-  <name>REST Request Maven Plugin Test</name>
+    <!--<dependencies>-->
+        <!--<dependency>-->
+            <!--<groupId>com.github.funthomas424242</groupId>-->
+            <!--<artifactId>rest-maven-plugin</artifactId>-->
+            <!--<version>0.1.5</version>-->
+        <!--</dependency>-->
+    <!--</dependencies>-->
 
-  <properties>
-    <rest-maven-plugin.version>0.1.5-SNAPSHOT</rest-maven-plugin.version>
-  </properties>
+    <build>
 
-  <dependencies>
-    <dependency>
-      <groupId>com.github.funthomas424242</groupId>
-      <artifactId>rest-maven-plugin</artifactId>
-      <version>${rest-maven-plugin.version}</version>
-    </dependency>
-  </dependencies>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <includes>
+                    <include>**/*.md</include>
+                </includes>
+                <filtering>false</filtering>
+            </resource>
+            <resource>
+                <directory>src/main/resources/xsd</directory>
+                <includes>
+                    <include>*.xsd</include>
+                </includes>
+            </resource>
+        </resources>
 
-  <build>
-    <resources>
-      <resource>
-        <directory>src/main/resources</directory>
-        <includes>
-          <include>**/*.md</include>
-        </includes>
-        <filtering>false</filtering>
-      </resource>
-      <resource>
-        <directory>src/main/resources/xsd</directory>
-        <includes>
-          <include>*.xsd</include>
-        </includes>
-      </resource>
-    </resources>
-    <plugins>
-      <plugin>
-        <groupId>com.github.cjnygard</groupId>
-        <artifactId>rest-maven-plugin</artifactId>
-        <executions>
-          <execution>
-            <phase>compile</phase>
-            <goals>
-              <goal>rest-request
-              </goal>
-            </goals>
-            <configuration>
-              <endpoint>http://docker:3001/md2pdf</endpoint>
-              <fileset>
-                <include>*.md</include>
-                <directory>${project.resources[0].directory}/test.md</directory>
-              </fileset>
-              <outputDir>${project.build.directory}/docs</outputDir>
-            </configuration>
-          </execution>
-        </executions>
-        <configuration>
-          <endpoint>http://docker:3001/md2pdf</endpoint>
-          <fileset>
-            <include>*.md</include>
-            <directory>${project.resources[0].directory}/test</directory>
-          </fileset>
-          <outputDir>${project.build.directory}/docs</outputDir>
-        </configuration>
-      </plugin>
-    </plugins>
-  </build>
-
-
+        <plugins>
+            <plugin>
+                <groupId>com.github.funthomas424242</groupId>
+                <artifactId>rest-maven-plugin</artifactId>
+                <version>0.1.5</version>
+                <configuration>
+                    <endpoint>https://api.bintray.com</endpoint>
+                    <resource>/repos/funthomas424242/funthomas424242-maven-plugins</resource>
+                    <method>GET</method>
+                    <responseType></responseType>
+                    <outputFilename>description.json</outputFilename>
+                    <outputDir>${project.build.directory}/docs</outputDir>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>

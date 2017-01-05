@@ -90,49 +90,31 @@
         <maven-compat.version>3.3.9</maven-compat.version>
         <maven-model.version>3.3.9</maven-model.version>
         <maven-plugin-api.version>3.3.9</maven-plugin-api.version>
-        <maven-project.version>2.2.1</maven-project.version>
         <maven-artifact.version>3.3.9</maven-artifact.version>
-        <maven-aether-provider.version>3.3.9</maven-aether-provider.version>
         <maven-plugin-annotations.version>3.4</maven-plugin-annotations.version>
         <maven-plugin-tools-annotations.version>3.4</maven-plugin-tools-annotations.version>
         <maven-plugin-tools-api.version>3.4</maven-plugin-tools-api.version>
-        <maven-plugin-testing-harness.version>3.3.0</maven-plugin-testing-harness.version>
         <maven-plugin-plugin.version>3.5</maven-plugin-plugin.version>
-        <!--<maven-checkstyle-plugin.version>2.16</maven-checkstyle-plugin.version>-->
-        <maven-invoker-plugin.version>2.0.0</maven-invoker-plugin.version>
-        <!--<maven-gpg-plugin.version>1.5</maven-gpg-plugin.version>-->
 
         <!-- http://stackoverflow.com/questions/22355235/patch-request-using-jersey-client -->
         <jersey-client.version>2.25</jersey-client.version>
         <jersey-json.version>1.19.3</jersey-json.version>
 
-
-        <!--<file-management.version>1.2</file-management.version>-->
-
-        <!-- Plexus component versions -->
-        <plexus-compiler-api.version>2.5</plexus-compiler-api.version>
-        <plexus-utils.version>3.0.22</plexus-utils.version>
-        <plexus-build-api.version>0.0.7</plexus-build-api.version>
-        <plexus.version>3.0.22</plexus.version>
-        <plexus-resources.version>1.0.1</plexus-resources.version>
-        <plexus-io.version>2.6.1</plexus-io.version>
-        <plexus-component-annotations.version>1.6</plexus-component-annotations.version>
-        <plexus-component-metadata.version>1.6</plexus-component-metadata.version>
     </properties>
 
     <dependencies>
 
-        <dependency>
-            <groupId>org.codehaus.plexus</groupId>
-            <artifactId>plexus-io</artifactId>
-            <version>${plexus-io.version}</version>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>org.codehaus.plexus</groupId>-->
+            <!--<artifactId>plexus-io</artifactId>-->
+            <!--<version>${plexus-io.version}</version>-->
+        <!--</dependency>-->
 
-        <dependency>
-            <groupId>org.codehaus.plexus</groupId>
-            <artifactId>plexus-utils</artifactId>
-            <version>${plexus-utils.version}</version>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>org.codehaus.plexus</groupId>-->
+            <!--<artifactId>plexus-utils</artifactId>-->
+            <!--<version>${plexus-utils.version}</version>-->
+        <!--</dependency>-->
 
         <dependency>
             <groupId>commons-io</groupId>
@@ -177,11 +159,11 @@
             <scope>provided</scope>
         </dependency>
 
-        <!--<dependency>-->
-        <!--<groupId>org.apache.maven.plugin-tools</groupId>-->
-        <!--<artifactId>maven-plugin-tools-api</artifactId>-->
-        <!--<version>${maven-plugin-tools-api.version}</version>-->
-        <!--</dependency>-->
+        <dependency>
+            <groupId>org.apache.maven.plugin-tools</groupId>
+            <artifactId>maven-plugin-tools-api</artifactId>
+            <version>${maven-plugin-tools-api.version}</version>
+        </dependency>
 
         <dependency>
             <groupId>org.glassfish.jersey.core</groupId>
@@ -189,69 +171,24 @@
             <version>${jersey-client.version}</version>
         </dependency>
 
-        <!--<dependency>-->
-        <!--<groupId>org.glassfish.jersey.connectors</groupId>-->
-        <!--<artifactId>jersey-grizzly-connector</artifactId>-->
-        <!--<version>${jersey-client.version}</version>-->
-        <!--</dependency>-->
 
-        <!--<dependency>-->
-        <!--<groupId>org.glassfish.jersey.connectors</groupId>-->
-        <!--<artifactId>jersey-apache-connector</artifactId>-->
-        <!--<version>${jersey-client.version}</version>-->
-        <!--</dependency>-->
 
-        <!--<dependency>-->
-        <!--<groupId>org.glassfish.jersey.connectors</groupId>-->
-        <!--<artifactId>jersey-jetty-connector</artifactId>-->
-        <!--<version>${jersey-client.version}</version>-->
-        <!--</dependency>-->
 
-        <!--<dependency>-->
-        <!--<groupId>com.sun.jersey</groupId>-->
-        <!--<artifactId>jersey-json</artifactId>-->
-        <!--<version>${jersey-json.version}</version>-->
-        <!--</dependency>-->
 
-        <!--<dependency>-->
-        <!--<groupId>com.fasterxml.jackson.core</groupId>-->
-        <!--<artifactId>jackson-databind</artifactId>-->
-        <!--<version>2.2.3</version>-->
-        <!--</dependency>-->
-
-        <!--<dependency>-->
-        <!--<groupId>com.fasterxml.jackson.module</groupId>-->
-        <!--<artifactId>jackson-module-jaxb-annotations</artifactId>-->
-        <!--<version>2.4.0</version>-->
-        <!--</dependency>-->
-
-        <!--<dependency>-->
-        <!--<groupId>com.fasterxml.jackson.core</groupId>-->
-        <!--<artifactId>jackson-core</artifactId>-->
-        <!--<version>2.2.3</version>-->
-        <!--</dependency>-->
 
         <dependency>
             <groupId>org.apache.maven.plugin-testing</groupId>
             <artifactId>maven-plugin-testing-harness</artifactId>
-            <version>${maven-plugin-testing-harness.version}</version>
+            <version>3.3.0</version>
             <scope>test</scope>
-            <!--<type>jar</type>-->
         </dependency>
 
-        <!--<dependency>-->
-            <!--<groupId>org.apache.maven</groupId>-->
-            <!--<artifactId>maven-compat</artifactId>-->
-            <!--<version>${maven-compat.version}</version>-->
-            <!--<scope>test</scope>-->
-        <!--</dependency>-->
-
-        <!--<dependency>-->
-            <!--<groupId>org.apache.maven</groupId>-->
-            <!--<artifactId>maven-aether-provider</artifactId>-->
-            <!--<version>${maven-aether-provider.version}</version>-->
-            <!--<scope>test</scope>-->
-        <!--</dependency>-->
+        <dependency>
+            <groupId>org.apache.maven</groupId>
+            <artifactId>maven-compat</artifactId>
+            <version>${maven-compat.version}</version>
+            <scope>test</scope>
+        </dependency>
 
         <dependency>
             <groupId>junit</groupId>
@@ -260,27 +197,28 @@
             <scope>test</scope>
         </dependency>
 
-        <!--<dependency>-->
-            <!--<groupId>org.apache.maven</groupId>-->
-            <!--<artifactId>maven-artifact</artifactId>-->
-            <!--<version>${maven-artifact.version}</version>-->
-            <!--<scope>test</scope>-->
-        <!--</dependency>-->
+        <dependency>
+            <groupId>org.apache.maven</groupId>
+            <artifactId>maven-artifact</artifactId>
+            <version>${maven-artifact.version}</version>
+            <scope>test</scope>
+        </dependency>
 
-        <!-- Plexus components dependencies.    -->
-        <!--<dependency>-->
-            <!--<groupId>org.codehaus.plexus</groupId>-->
-            <!--<artifactId>plexus-compiler-api</artifactId>-->
-            <!--<version>${plexus-compiler-api.version}</version>-->
-            <!--<scope>test</scope>-->
-        <!--</dependency>-->
+        <!-- https://mvnrepository.com/artifact/org.apache.maven/maven-artifact-manager -->
+        <dependency>
+            <groupId>org.apache.maven</groupId>
+            <artifactId>maven-artifact-manager</artifactId>
+            <version>2.2.1</version>
+            <scope>test</scope>
+        </dependency>
 
-        <!--<dependency>-->
-            <!--<groupId>org.sonatype.plexus</groupId>-->
-            <!--<artifactId>plexus-build-api</artifactId>-->
-            <!--<version>${plexus-build-api.version}</version>-->
-            <!--<scope>test</scope>-->
-        <!--</dependency>-->
+        <!-- https://mvnrepository.com/artifact/org.codehaus.plexus/plexus-utils -->
+        <dependency>
+            <groupId>org.codehaus.plexus</groupId>
+            <artifactId>plexus-utils</artifactId>
+            <version>3.0.24</version>
+        </dependency>
+
 
         <!--<dependency>-->
             <!--<groupId>org.codehaus.plexus</groupId>-->
@@ -315,27 +253,6 @@
 
     <build>
         <plugins>
-
-            <!--<plugin>-->
-                <!--<groupId>org.apache.maven.plugins</groupId>-->
-                <!--<artifactId>maven-plugin-plugin</artifactId>-->
-                <!--<version>${maven-plugin-plugin.version}</version>-->
-                <!--<executions>-->
-                    <!--<execution>-->
-                        <!--<id>default-descriptor</id>-->
-                        <!--<phase>process-classes</phase>-->
-                    <!--</execution>-->
-                    <!--<execution>-->
-                        <!--<id>help-goal</id>-->
-                        <!--<goals>-->
-                            <!--<goal>helpmojo</goal>-->
-                        <!--</goals>-->
-                    <!--</execution>-->
-                <!--</executions>-->
-                <!--<configuration>-->
-                    <!--<skipErrorNoDescriptorsFound>true</skipErrorNoDescriptorsFound>-->
-                <!--</configuration>-->
-            <!--</plugin>-->
 
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
