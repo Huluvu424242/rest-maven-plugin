@@ -5,6 +5,25 @@
 [![Build Status](https://travis-ci.org/FunThomas424242/rest-maven-plugin.svg?branch=master)](https://travis-ci.org/FunThomas424242/rest-maven-plugin)
 [![codecov](https://codecov.io/gh/FunThomas424242/rest-maven-plugin/branch/master/graph/badge.svg)](https://codecov.io/gh/FunThomas424242/rest-maven-plugin)
 
+## Developer Info
+
+### Build a release
+
+```shell
+# start the ssh-agent in the background
+>eval "$(ssh-agent -s)"
+Agent pid 59566
+
+>ssh-add
+
+>mvn -B unleash:perform-tycho
+
+# kill the agent
+>ssh-agent -k
+```
+
+## User Info
+
 Welcome to the rest-maven-plugin plugin for Apache Maven 3.
 
 This plugin is meant to provide an easy way to interface to REST
