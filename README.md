@@ -16,7 +16,9 @@ Agent pid 59566
 
 >ssh-add
 
->mvn -B unleash:perform-tycho
+>mvn -B release:prepare
+
+>mvn -B release:perform
 
 # kill the agent
 >ssh-agent -k
