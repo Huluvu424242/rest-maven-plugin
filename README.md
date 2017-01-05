@@ -3,6 +3,7 @@
 (this is a fork of the [cjnygard/rest-maven-plugin](https://github.com/cjnygard/rest-maven-plugin) project)
 
 [![Build Status](https://travis-ci.org/FunThomas424242/rest-maven-plugin.svg?branch=master)](https://travis-ci.org/FunThomas424242/rest-maven-plugin)
+[![codecov](https://codecov.io/gh/FunThomas424242/rest-maven-plugin/branch/master/graph/badge.svg)](https://codecov.io/gh/FunThomas424242/rest-maven-plugin)
 
 Welcome to the rest-maven-plugin plugin for Apache Maven 3.
 
