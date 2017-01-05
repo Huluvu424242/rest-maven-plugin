@@ -61,9 +61,9 @@
     </contributors>
 
     <scm>
-        <developerConnection>scm:git:ssh://git@github.com/funthomas424242/rest-maven-plugin.git</developerConnection>
-        <connection>scm:git:https://github.com/funthomas424242/rest-maven-plugin.git</connection>
-        <url>https://github.com/funthomas424242/rest-maven-plugin.git</url>
+        <url>https://github.com/FunThomas424242/rest-maven-plugin</url>
+        <connection>scm:git:https://github.com/FunThomas424242/rest-maven-plugin.git</connection>
+        <developerConnection>scm:git:https://github.com/FunThomas424242/rest-maven-plugin.git</developerConnection>
         <tag>HEAD</tag>
     </scm>
 
