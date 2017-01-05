@@ -53,18 +53,18 @@ plugin and add a dependency on rest-maven-plugin:
     <build>
       <plugins>
         <plugin>
-          <groupId>com.github.cjnygard</groupId>
+          <groupId>com.github.funthomas424242</groupId>
           <artifactId>rest-maven-plugin</artifactId>
-          <version>0.1.4</version>
+          <version>0.1.5</version>
         </plugin>
       </plugins>
     </build>
     ....
     <dependencies>
       <dependency>
-        <groupId>com.github.cjnygard</groupId>
+        <groupId>com.github.funthomas424242</groupId>
         <artifactId>rest-maven-plugin</artifactId>
-        <version>0.1.4</version>
+        <version>0.1.5</version>
       </dependency>
     </dependencies>
 
