@@ -9,13 +9,7 @@
     <packaging>jar</packaging>
     <name>Test of Rest Plugin</name>
 
-    <!--<dependencies>-->
-        <!--<dependency>-->
-            <!--<groupId>com.github.funthomas424242</groupId>-->
-            <!--<artifactId>rest-maven-plugin</artifactId>-->
-            <!--<version>0.1.5</version>-->
-        <!--</dependency>-->
-    <!--</dependencies>-->
+
 
     <build>
 
@@ -43,11 +37,20 @@
                 <configuration>
                     <endpoint>https://api.bintray.com</endpoint>
                     <resource>/repos/funthomas424242/funthomas424242-maven-plugins</resource>
-                    <method>GET</method>
-                    <responseType></responseType>
-                    <outputFilename>description.json</outputFilename>
-                    <outputDir>${project.build.directory}/docs</outputDir>
                 </configuration>
+                <executions>
+                    <execution>
+                        <id>test get repo</id>
+                        <goals>
+                            <goal>rest-request</goal>
+                        </goals>
+                        <configuration>
+                            <method>GET</method>
+                            <outputFilename>repo-doc.json</outputFilename>
+                            <outputDir>${project.build.directory}/docs</outputDir>
+                        </configuration>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
