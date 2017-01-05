@@ -5,7 +5,7 @@
 >
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.github.cjnygard</groupId>
+  <groupId>com.github.funthomas424242</groupId>
   <artifactId>rest-maven-plugin-test</artifactId>
   <version>0.1.5-SNAPSHOT</version>
   <packaging>jar</packaging>
@@ -18,7 +18,7 @@
 
   <dependencies>
     <dependency>
-      <groupId>com.github.cjnygard</groupId>
+      <groupId>com.github.funthomas424242</groupId>
       <artifactId>rest-maven-plugin</artifactId>
       <version>${rest-maven-plugin.version}</version>
     </dependency>
