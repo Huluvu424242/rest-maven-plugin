@@ -103,7 +103,7 @@
         <maven-plugin-tools-annotations.version>3.4</maven-plugin-tools-annotations.version>
         <maven-plugin-tools-api.version>3.4</maven-plugin-tools-api.version>
         <maven-plugin-testing-harness.version>3.3.0</maven-plugin-testing-harness.version>
-        <maven-plugin-plugin.version>3.4</maven-plugin-plugin.version>
+        <maven-plugin-plugin.version>3.5</maven-plugin-plugin.version>
         <!--<maven-checkstyle-plugin.version>2.16</maven-checkstyle-plugin.version>-->
         <maven-invoker-plugin.version>2.0.0</maven-invoker-plugin.version>
         <!--<maven-gpg-plugin.version>1.5</maven-gpg-plugin.version>-->
@@ -164,17 +164,17 @@
 
 
 
-        <dependency>
-        <groupId>org.apache.maven</groupId>
-        <artifactId>maven-project</artifactId>
-        <version>${maven-project.version}</version>
-        </dependency>
+        <!--<dependency>-->
+        <!--<groupId>org.apache.maven</groupId>-->
+        <!--<artifactId>maven-project</artifactId>-->
+        <!--<version>${maven-project.version}</version>-->
+        <!--</dependency>-->
 
-        <dependency>
-        <groupId>org.apache.maven</groupId>
-        <artifactId>maven-model</artifactId>
-        <version>${maven-model.version}</version>
-        </dependency>
+        <!--<dependency>-->
+        <!--<groupId>org.apache.maven</groupId>-->
+        <!--<artifactId>maven-model</artifactId>-->
+        <!--<version>${maven-model.version}</version>-->
+        <!--</dependency>-->
 
         <dependency>
             <groupId>org.apache.maven.plugin-tools</groupId>
@@ -183,11 +183,11 @@
             <scope>provided</scope>
         </dependency>
 
-        <dependency>
-        <groupId>org.apache.maven.plugin-tools</groupId>
-        <artifactId>maven-plugin-tools-api</artifactId>
-        <version>${maven-plugin-tools-api.version}</version>
-        </dependency>
+        <!--<dependency>-->
+        <!--<groupId>org.apache.maven.plugin-tools</groupId>-->
+        <!--<artifactId>maven-plugin-tools-api</artifactId>-->
+        <!--<version>${maven-plugin-tools-api.version}</version>-->
+        <!--</dependency>-->
 
         <dependency>
             <groupId>org.glassfish.jersey.core</groupId>
@@ -242,22 +242,22 @@
             <artifactId>maven-plugin-testing-harness</artifactId>
             <version>${maven-plugin-testing-harness.version}</version>
             <scope>test</scope>
-            <type>jar</type>
+            <!--<type>jar</type>-->
         </dependency>
 
-        <dependency>
-            <groupId>org.apache.maven</groupId>
-            <artifactId>maven-compat</artifactId>
-            <version>${maven-compat.version}</version>
-            <scope>test</scope>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>org.apache.maven</groupId>-->
+            <!--<artifactId>maven-compat</artifactId>-->
+            <!--<version>${maven-compat.version}</version>-->
+            <!--<scope>test</scope>-->
+        <!--</dependency>-->
 
-        <dependency>
-            <groupId>org.apache.maven</groupId>
-            <artifactId>maven-aether-provider</artifactId>
-            <version>${maven-aether-provider.version}</version>
-            <scope>test</scope>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>org.apache.maven</groupId>-->
+            <!--<artifactId>maven-aether-provider</artifactId>-->
+            <!--<version>${maven-aether-provider.version}</version>-->
+            <!--<scope>test</scope>-->
+        <!--</dependency>-->
 
         <!--<dependency>-->
         <!--<groupId>junit</groupId>-->
@@ -322,36 +322,36 @@
     <build>
         <plugins>
 
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-plugin-plugin</artifactId>
-                <version>${maven-plugin-plugin.version}</version>
-                <executions>
-                    <execution>
-                        <id>default-descriptor</id>
-                        <phase>process-classes</phase>
-                    </execution>
-                    <execution>
-                        <id>help-goal</id>
-                        <goals>
-                            <goal>helpmojo</goal>
-                        </goals>
-                    </execution>
-                </executions>
-                <configuration>
-                    <skipErrorNoDescriptorsFound>true</skipErrorNoDescriptorsFound>
-                </configuration>
-            </plugin>
-
             <!--<plugin>-->
                 <!--<groupId>org.apache.maven.plugins</groupId>-->
-                <!--<artifactId>maven-compiler-plugin</artifactId>-->
-                <!--<version>3.3</version>-->
+                <!--<artifactId>maven-plugin-plugin</artifactId>-->
+                <!--<version>${maven-plugin-plugin.version}</version>-->
+                <!--<executions>-->
+                    <!--<execution>-->
+                        <!--<id>default-descriptor</id>-->
+                        <!--<phase>process-classes</phase>-->
+                    <!--</execution>-->
+                    <!--<execution>-->
+                        <!--<id>help-goal</id>-->
+                        <!--<goals>-->
+                            <!--<goal>helpmojo</goal>-->
+                        <!--</goals>-->
+                    <!--</execution>-->
+                <!--</executions>-->
                 <!--<configuration>-->
-                    <!--<source>1.8</source>-->
-                    <!--<target>1.8</target>-->
+                    <!--<skipErrorNoDescriptorsFound>true</skipErrorNoDescriptorsFound>-->
                 <!--</configuration>-->
             <!--</plugin>-->
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.3</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
 
             <plugin>
                 <groupId>org.jacoco</groupId>
