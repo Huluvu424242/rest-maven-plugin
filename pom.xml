@@ -47,6 +47,9 @@
   </scm>
 
   <properties>
+    <!-- http://stackoverflow.com/questions/22355235/patch-request-using-jersey-client -->
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
     <!-- Turn off checkstyle formatting -->
     <!--netbeans.checkstyle.format>false</netbeans.checkstyle.format-->
     <netbeans.checkstyle.format>true</netbeans.checkstyle.format>
@@ -69,9 +72,9 @@
     <maven-invoker-plugin.version>2.0.0</maven-invoker-plugin.version>
     <maven-gpg-plugin.version>1.5</maven-gpg-plugin.version>
 
-    <jersey-client.version>2.22.1</jersey-client.version>
-    <jersey-media-moxy.version>2.0</jersey-media-moxy.version>
-    <jersey-json.version>1.19</jersey-json.version>
+    <!-- http://stackoverflow.com/questions/22355235/patch-request-using-jersey-client -->
+    <jersey-client.version>2.25</jersey-client.version>
+    <jersey-json.version>1.19.3</jersey-json.version>
     <file-management.version>1.2</file-management.version>
 
     <!-- Plexus component versions -->

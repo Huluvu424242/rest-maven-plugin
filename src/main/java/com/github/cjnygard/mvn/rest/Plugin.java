@@ -56,6 +56,7 @@ import org.apache.maven.settings.Settings;
 import org.codehaus.plexus.components.io.filemappers.FileMapper;
 //import org.codehaus.plexus.component.annotations.Component;
 import org.codehaus.plexus.util.FileUtils;
+import org.glassfish.jersey.client.HttpUrlConnectorProvider;
 import org.sonatype.plexus.build.incremental.BuildContext;
 
 /**
@@ -606,7 +607,8 @@ public class Plugin extends AbstractMojo
 
         Client client = ClientBuilder.newClient();
         client.register(new Authenticator(user, password));
-
+        //http://stackoverflow.com/questions/22355235/patch-request-using-jersey-client
+        client.property(HttpUrlConnectorProvider.SET_METHOD_WORKAROUND, true);
 
         WebTarget baseTarget = client.target( getEndpoint() );
         if ( null != getResource() )
